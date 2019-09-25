@@ -1,10 +1,19 @@
 <?php
 
 get_header();
+
 ?>
+
+<div id="main-content">
+<article id="post-46776" class="post-46776 post type-post status-publish format-standard has-post-thumbnail hentry category-solar" style="min-height: 950px">
+<div class="entry-content">
+<p></p>
+<style>
+#main-header {
+    background-color: #212228;
+}
+</style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jvectormap/2.0.4/jquery-jvectormap.min.css"
-    type="text/css" media="screen" />
-<link rel="stylesheet" href="<?php echo plugins_url() ?>/rep-finder/assets/rocket.css"
     type="text/css" media="screen" />
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jvectormap@2.0.4/jquery-jvectormap.min.js"></script>
@@ -14,7 +23,7 @@ get_header();
     #rep-finder,
     #map {
         width: 100%;
-        max-width: 1000px;
+        max-width: 1500px;
         margin: 0 auto;
     }
 
@@ -24,14 +33,14 @@ get_header();
 </style>
 
 
-<div style="padding-top: 50px;" class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular et_pb_section_first" id='rep-finder'>
-    <h3>Select a state to view the representative for your region</h3>
-    <div id="map"></div>
-    <h3 id="rep"></h3>
-    <h4 id="areas">
-        </h3>
-        <h4 id="email"></h4>
+<div style="padding-top: 160px !important;"  id='rep-finder'>
+    <div id="map" style="padding-top:20px; width: 60%; float: left;"></div>
+    <div style="width: 40%; float:right; padding: 20px;">
+        <h3 id="rep" style="padding-top:20px; font-weight: 700; font-size: 30px;">Select a state to view the representative for your region</h3>
+        <h4 id="areas"></h4>
+        <h4 id="email" style="text-decoration: underline;  font-weight: 700;"></h4>
         <h4 id="phone"></h4>
+    </div>
 </div>
 <script>
     // Group states into Areas
@@ -41,44 +50,44 @@ get_header();
             { 
               name: 'AM Engineered Sales', 
               phone: '(513)-759-5611',
-              email: 'sales@amengineeredsales.com',
+              email: '<a href="mailto:sales@amengineeredsales.com">sales@amengineeredsales.com</a>',
               color: '#EF5350', 
               codes: ["US-PA", "US-OH", "US-WV", "US-KY", "US-IN", "US-MI"] 
               },
             { 
               name: 'Borg General Sales', 
               phone: '(847)-640-4635',
-              email: 'preston@borggeneral.com',
-              color: '#EC407A', 
+              email: '<a href="mailto:preston@borggeneral.com">preston@borggeneral.com</a>',
+              color: '#1B81A6', 
               codes: ["US-WI", "US-IL"] 
               },
             { 
               name: 'L-3', 
               phone: '(770)-565-1556',
-              email: 'John@L-3.com',
+              email: '<a href="mailto:John@L-3.com">John@L-3.com</a>',
               color: '#AB47BC', 
               codes: ["US-AR", "US-TN", "US-MS", "US-AL", "US-GA", "US-FL"] 
               },
             { 
               name: 'Lynn Elliott', 
               phone: '(713)-465-6366',
-              email: 'mcorso@lynnelliott.com',
-              color: '#7E57C2', 
+              email: '<a href="mailto:mcorso@lynnelliott.com">mcorso@lynnelliott.com</a>',
+              color: '#E3CA09', 
               codes: ["US-NM", "US-OK", "US-TX", "US-LA"] 
               },
             { 
               name: 'EMPOWER Sales', 
               phone: '(760)-324-1555',
-              email: 'wcarroll@empowersales.net',
+              email: '<a href="mailto:wcarroll@empowersales.net">wcarroll@empowersales.net</a>',
               color: '#5C6BC0', 
               codes: ["US-WA", "US-MT", "US-ID", "US-OR", "US-UT", "US-AZ"] 
               },
             { 
               name: 'Ponton', 
               phone: "(714)-998-9073",
-              email: "info@pontonind.com",
+              email: '<a href="mailto:info@pontonind.com">info@pontonind.com</a>',
               color: '#42A5F5', 
-              codes: ["US-NV", "US-CA"] }
+              codes: ["US-NV", "US-CA", "US-HI"] }
         ];
 
     const codeColors = {};
@@ -90,7 +99,7 @@ get_header();
 
     function selectArea(code) {
         const region = regions.find(region => region.codes.includes(code));
-            $("#rep").html("");
+            $("#rep").html("Select a state to view the representative for your region");
             $("#areas").html("")
             $("#email").html("");
             $("#phone").html("")
@@ -142,10 +151,11 @@ series: {
     });
 
 </script>
+</article>
+</div>
 
+</div>
 
 <?php
 
 get_footer();
-
-?>
