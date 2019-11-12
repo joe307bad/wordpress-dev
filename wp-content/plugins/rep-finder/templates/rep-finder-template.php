@@ -87,7 +87,21 @@ get_header();
               phone: "(714)-998-9073",
               email: '<a href="mailto:info@pontonind.com">info@pontonind.com</a>',
               color: '#42A5F5', 
-              codes: ["US-NV", "US-CA", "US-HI"] }
+              codes: ["US-NV", "US-CA", "US-HI"] },
+            { 
+              name: 'PNC Power Solutions Company', 
+              phone: "(605)-521-9422",
+              email: '<a href="mailto:matt.kneip@pncpower.com">matt.kneip@pncpower.com</a>',
+              color: '#fc037b', 
+              codes: ["US-ND", "US-SD", "US-MT", "US-NE", "US-WY"] 
+            },
+            { 
+              name: 'SWC Industries', 
+              phone: "(215)-328-9700",
+              email: '<a href="mailto:info@swcindustries.com">info@swcindustries.com</a>',
+              color: '#5c9900', 
+              codes: ["US-NJ", "US-DE", "US-MD", "US-VA"] 
+            }
         ];
 
     const codeColors = {};
